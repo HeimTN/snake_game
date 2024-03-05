@@ -5,7 +5,7 @@ import javax.swing.*;
 public class Main {
     public static void main(String[] args) {
         int boardWidth = 600;
-        int boardHeight = boardWidth;
+        int boardHeight = boardWidth + 50;
 
         JFrame frame = new JFrame("snake");
         frame.setVisible(true);
@@ -14,9 +14,16 @@ public class Main {
         frame.setResizable(false);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        SnakeGame snakeGame = new SnakeGame(boardWidth, boardHeight);
-        frame.add(snakeGame);
+//        SnakeGame snakeGame = new SnakeGame(boardWidth, boardHeight);
+//        frame.add(snakeGame);
+//        frame.pack();
+//        snakeGame.requestFocus();
+
+        TicTacToe ticTacToe = new TicTacToe(boardWidth, boardHeight);
+        frame.add(ticTacToe);
         frame.pack();
-        snakeGame.requestFocus();
+
+
+
     }
 }
